@@ -45,7 +45,9 @@ useSeoMeta({
 export default {
   data(){
     return{
-      imgList:['_nuxt/img/image 3.svg','_nuxt/img/image 2.png','_nuxt/img/image 1 (1).png'],
+      imgList:['image/image 3.svg',
+      'image/image 2.png',
+      'image/image 1 (1).png'],
       dateList:['02.10.2024','29.09.2024','26.09.2024']
     }
   }
