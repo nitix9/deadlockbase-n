@@ -1,7 +1,7 @@
 <template>
     <header>
         <nav>
-            <div class="logo"><img src="..\img\DEADLOCKBASE.png"></div>
+            <div class="logo"><img src="\image\DEADLOCKBASE.png"></div>
         <div class="menu">
             <ul>
             <li>ИГРА</li>
