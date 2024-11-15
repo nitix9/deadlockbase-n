@@ -9,7 +9,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "predeploy": "nuxt generate",
-    "deploy": "gh-pages -d dist -t true"
+    "deploy": "gh-pages -d dist --dotfiles"
   },
   "dependencies": {
     "nuxt": "^3.13.2",
