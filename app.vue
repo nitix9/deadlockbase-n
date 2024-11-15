@@ -6,7 +6,7 @@ useSeoMeta({
   description: 'Новости, гайды на героев и многое другое по игре Deadlock.',
   ogDescription: 'Новости, гайды на героев и многое другое по игре Deadlock.',
   ogImage: 'img/DEADLOCKBASE.png',
-  ogSiteName:'Deadlockone',
+  ogSiteName:'Deadlockbase',
   twitterCard: 'summary_large_image',
   twitterDescription:'Новости, гайды на героев и многое другое по игре Deadlock - многопользовательскому шутеру 6 на 6 с большим количеством героев, предметов, тактик и механик.',
   twitterTitle:'Новости, гайды на героев и многое другое по игре Deadlock.',
