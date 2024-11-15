@@ -2,7 +2,7 @@
 export default {
   mode: 'static',
   router: {
-    base: '/deadlockbase-n'
+    base: '/deadlockbase-n/'
   },
   compatibilityDate: '2024-04-03',
 }
