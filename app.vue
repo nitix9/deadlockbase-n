@@ -5,12 +5,12 @@ useSeoMeta({
   ogTitle: 'Deadlockbase - всё об игре Deadlock',
   description: 'Новости, гайды на героев и многое другое по игре Deadlock.',
   ogDescription: 'Новости, гайды на героев и многое другое по игре Deadlock.',
-  ogImage: 'image/DEADLOCKBASE.png',
+  ogImage: 'https://nitix9.github.io/deadlockbase-n/image/DEADLOCKBASE.png',
   ogSiteName:'Deadlockbase',
   twitterCard: 'summary_large_image',
   twitterDescription:'Новости, гайды на героев и многое другое по игре Deadlock - многопользовательскому шутеру 6 на 6 с большим количеством героев, предметов, тактик и механик.',
   twitterTitle:'Новости, гайды на героев и многое другое по игре Deadlock.',
-  twitterImage:'image/DEADLOCKBASE.png',
+  twitterImage:'https://nitix9.github.io/deadlockbase-n/image/DEADLOCKBASE.png',
 })
 </script>
 <template>
