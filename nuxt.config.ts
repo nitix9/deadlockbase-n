@@ -1,7 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default {
-  target: 'static',
+  mode: 'static',
   router: {
-    base: '/deadlockbase-n/'
-  }
+    base: '/deadlockbase-n'
+  },
+  compatibilityDate: '2024-04-03',
 }
