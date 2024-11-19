@@ -1,0 +1,1 @@
+<template><div>Салам, мы новости</div></template>
