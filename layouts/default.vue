@@ -1,15 +1,26 @@
 <template>
     <header>
         <nav>
-            <div class="logo"><NuxtLink to="/"><img src="\image\DEADLOCKBASE.png"></NuxtLink></div>
-            <div class="menu">
+            <div class="logo">
+                <NuxtLink to="/"><img src="\image\DEADLOCKBASE.png"></NuxtLink>
+            </div>
+            <div class="menu" :class="{open:isActive}">
                 <ul>
-                    <li><NuxtLink to="/">ГЕРОИ</NuxtLink></li>
-                    <li><NuxtLink to="/">ПРЕДМЕТЫ</NuxtLink></li>
-                    <li><NuxtLink to="/news">НОВОСТИ</NuxtLink></li>
+                    <li>
+                        <NuxtLink to="/heroes">ГЕРОИ</NuxtLink>
+                    </li>
+                    <li>
+                        <NuxtLink to="/items">ПРЕДМЕТЫ</NuxtLink>
+                    </li>
+                    <li>
+                        <NuxtLink to="/news">НОВОСТИ</NuxtLink>
+                    </li>
                 </ul>
             </div>
         </nav>
+        <div class="burger-container">
+                <div @click="getClassStatus" class="burger" :class="{ active: isActive }"><span></span></div>
+        </div>
     </header>
     <main>
         <slot />
@@ -51,6 +62,49 @@
     font-family: 'Montserrat';
     src:url('../fonts/Montserrat-Light.ttf');
     font-weight: 300;
+}
+.burger-container{display:none;}
+.burger {
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+}
+.burger span {
+    height: 2px;
+    width: 100%;
+    transform: scale(1);
+    background-color: white;
+}
+.burger::before, .burger::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: white;
+    transition:all 0.3s ease 0s;
+}
+.burger::before {
+    top: 0;
+}
+
+.burger::after {
+    bottom: 0;
+}
+.burger.active span{transform: scale(0);}
+.burger.active::before{
+    top:50%;
+    transform: rotate(-45deg) translate(0,-50%);
+}
+.burger.active::after{
+    bottom: 50%;
+    transform: rotate(45deg) translate(0,50%);
+}
+.open{
+    display: flex !important;
 }
 a{text-decoration: none;color:#D9D9D9}
 a:hover{color: white;}
@@ -143,9 +197,22 @@ li {
 }
 
 @media (max-width:640px) {
+    .burger-container{display:flex;}
+    .burger{display: flex;}
+
     .menu {
         display: none;
+        justify-content: flex-end;
+        position: fixed;
+        padding: 67px 40px 0 0; 
+
     }
+    .menu ul{flex-direction: column;     position: fixed;align-items: flex-end;justify-content: flex-start  ;
+        height: 100%;
+        width: 100%;
+        background-color:rgba(0, 0, 0, 71%);;
+        z-index: 50;}
+    .menu ul li {padding-right: 60px;}
 
     .logo img {
         min-width: unset;
@@ -163,3 +230,22 @@ li {
 
 }
 </style>
+<script>
+export default{
+    data(){
+        return{
+            isActive:false,
+        }
+    },
+    methods:{
+        getClassStatus(){
+        if (this.isActive){
+            this.isActive=false;
+        }
+        else {
+            this.isActive=true;
+        }
+    }
+    }
+}
+</script>

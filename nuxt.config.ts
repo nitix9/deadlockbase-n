@@ -4,4 +4,5 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app:{baseURL:'/deadlockbase-n/'},
   ssr:true,
+  modules: ["@pinia/nuxt"],
 })
