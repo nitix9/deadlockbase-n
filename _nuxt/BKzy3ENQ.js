@@ -1,0 +1,1 @@
+import{_ as r}from"./DlAUqK2U.js";import{c as t,a as o,o as n}from"./BGia0A10.js";const s={};function a(c,e){return n(),t("footer",null,e[0]||(e[0]=[o("div",{class:"info-footer"},[o("p",null,"Обратная связь"),o("p",null,"Deadlockbase © 2024")],-1)]))}const p=r(s,[["render",a]]);export{p as default};
